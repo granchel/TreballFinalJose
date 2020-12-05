@@ -1,0 +1,76 @@
+
+body{
+   background-image: url(../img/carretera2.jpg); 
+   
+}
+
+#containergran{
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+}
+
+a{
+    cursor:pointer;
+    color: white !important;
+}
+
+#canvas{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*-------------------cabecera---------------------*/
+.cabecera{
+    background-color: #353a40;
+    padding: 8px;
+}
+
+
+/*---------------------pagina-----------------------*/
+.titulop{
+    text-align: center;
+    color: white;
+}
+
+
+.pag{
+    background-color: #353a40;
+    margin: 3em;
+    
+}
+
+
+
+
+/*---------------------pie-----------------------*/
+.pie{
+     background-color: #353a40;
+     position: absolute;
+     width: 100%;
+     bottom: 0px;
+}
+
+.parrafopie{
+     color: white;
+}
+
+/*-----------------pagina inicio-------------------*/
+.img{
+    margin: 50px;
+    margin-left: 47%;
+     
+}
+.fecha{
+    margin: 10px;
+    margin-left: 1080px;
+}
+/****************************************************/
+
+.pag2{
+    background-color: #353a40;
+    margin: 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
