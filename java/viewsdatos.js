@@ -2,6 +2,7 @@ export { datosUsuario};
 import { datos } from "./exportdatos.js";
 import { main2,registros,login,main} from "./viewsmenus.js";
 
+//Funcion
 async function datosUsuario(){
     let contenedor= document.querySelector(".divprincipal");
     let arrays = await datos();
