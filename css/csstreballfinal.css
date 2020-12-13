@@ -20,6 +20,28 @@ a{
     justify-content: space-around;
 }
 
+.divplacacentral{
+    display: flex;
+    justify-content: space-around;
+    margin: 5em;
+}
+
+.divplaca{
+    background: linear-gradient(70deg, rgb(85, 67, 67),rgb(63, 42, 42));
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.botons{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+}
+
+.botons input{
+    margin: 1em;
+}
+
 /*-------------------cabecera---------------------*/
 .cabecera{
     background-color: #353a40;

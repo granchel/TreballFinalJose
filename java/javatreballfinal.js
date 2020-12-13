@@ -14,7 +14,7 @@ class Galletes {
   var expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
+//Variables let i const
 static eliminargalleta(){
   let galleta= Galletes.getCookie("username");
   galleta = document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -100,7 +100,7 @@ let chartData = {
 }
 //Funcions
 let usuariClass;
-async function validar(e){
+async function validar(e){ //Declaració de funció
   e.preventDefault()
   let arrays = await datos();
   let login= arrays.login;
@@ -110,7 +110,7 @@ async function validar(e){
     let email = document.querySelector("#inputEmail").value;
     let con = document.querySelector("#inputPassword").value;
     
-    usuarioObject.forEach(element => {
+    usuarioObject.forEach(element => { //Iterables
     if(email == element.email && con== element.password ){
       usuariClass = Object.assign(new Usuarios, element);
       Galletes.setCookie("username",element.nom,7);
@@ -120,9 +120,10 @@ async function validar(e){
     
 }
 
-
+//Registre d'events W3C
  window.addEventListener("load", function () {
-         
+      //use strict  
+      "use strict" 
   if (Galletes.checkCookie("usename")) {
            main2()
          }else{

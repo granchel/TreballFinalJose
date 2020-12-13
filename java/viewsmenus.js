@@ -3,7 +3,8 @@ import { datos } from "./exportdatos.js";
 import { ChartMaker,validar,Galletes } from "./javatreballfinal.js";
 import { datosUsuario } from "./viewsdatos.js";
 import { estadistica,panel,moli,central } from "./viewsestadisticas.js";
-
+import { descargar, makeRequest, makeRequest2 } from "./requests.js";
+//Funcions
 function main(){
   console.log("main");
    document.title= "Pag Principal";
@@ -73,9 +74,10 @@ function main(){
    boto2.addEventListener('click',login);
    
 }
-
+//Funcions
 async function main2(){
   let arrays = await datos();
+   
   let grafics= arrays.grafics;
   document.title= "Pag Principal";
   let contenedor= document.querySelector(".divprincipal");
@@ -140,7 +142,7 @@ async function main2(){
   let boto5= document.querySelector("#cerrar");
   boto5.addEventListener('click',Galletes.eliminargalleta);
 }
-
+//Funcions
 function registros(){
   console.log("Registro");
    document.title= "Registro";

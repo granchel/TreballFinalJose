@@ -5,23 +5,23 @@
     "grafic3":{"produit":3,"perdut":3,"consumit":3}
 },
 
-"molins":{
-    "moli1":{"obtingut":3.2,"perdut":1,"consumit":2},
-    "moli2":{"produit":3.8,"perdut":4,"consumit":1},
-    "moli3":{"produit":3,"perdut":3,"consumit":3}
-},
+"molins":[
+    {"obtingut":3.2,"perdut":1,"consumit":2,"velocitat":3.8},
+    {"produit":3.8,"perdut":4,"consumit":1,"velocitat":6.8},
+    {"produit":3,"perdut":3,"consumit":3,"velocitat":7.3}
+],
 
-"panels":{
-    "panel1":{"obtingut":3.2,"perdut":1,"consumit":2},
-    "panel2":{"produit":3.8,"perdut":4,"consumit":1},
-    "panel3":{"produit":3,"perdut":3,"consumit":3}
-},
+"panels":[
+    {"obtingut":3.2,"perdut":1,"consumit":2,"horessol":10},
+    {"obtingut":3.8,"perdut":4,"consumit":1,"horessol":9},
+    {"obtingut":3,"perdut":3,"consumit":3,"horessol":8}
+],
 
-"central":{
-    "central1":{"obtingut":3.2,"perdut":1,"consumit":2,"anys":10,"estat":"bon estat"},
-    "central2":{"produit":3.8,"perdut":4,"consumit":1,"anys":25,"estat":"mal estat"},
-    "central3":{"produit":3,"perdut":3,"consumit":3,"anys":9,"estat":"bon estat"}
-},
+"central":[
+    {"obtingut":3.2,"perdut":1,"consumit":2,"anys":10,"estat":"bon estat","localitat":"Barcelona"},
+    {"produit":3.8,"perdut":4,"consumit":1,"anys":25,"estat":"mal estat","localitat":"Madrid"},
+    {"produit":3,"perdut":3,"consumit":3,"anys":9,"estat":"bon estat","localitat":"Valencia"}
+],
  
 "login":[
     {"email":"vicent@gmail.com","password":"123","nom":"vicent"},
