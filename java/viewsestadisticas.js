@@ -1,6 +1,7 @@
 export { estadistica,panel,moli,central}
 import { datos } from "./exportdatos.js";
 import { main2,registros,login,main} from "./viewsmenus.js";
+import { cridarEnviar } from "./peticions.js";
 
 //Funcions
 async function estadistica(){
@@ -37,7 +38,7 @@ async function estadistica(){
   <div class="progress-bar bg-danger" style="width:`+datosdias[0].Gastat+`%">
     Gastat `+datosdias[0].Gastat+`%
   </div>
-    
+
   </div>
 </div>
 </div>
@@ -103,7 +104,7 @@ async function estadistica(){
     <h1 class="titulop">Divendres</h1>
    <div class="container p-3">
  <div class="progress" >
-    
+
     <div class="progress-bar bg-success" style="width:`+datosdias[4].Obtingut+`%">
     Obtingut `+datosdias[4].Obtingut+`%
   </div>
@@ -190,17 +191,17 @@ async function panel() {
     <nav class="navbar fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" >Pagina principal</a>
     </nav>
-  
+
     <div class="cabecera">
-  
+
     <p class="parrafocabecera">Treball Final Vicent</p>
-    
+
     </div>
     <div class="pag">
     <br>
     <h1 class="titulop">Panels Solars</h1>
     <br>
-    
+
     <div class="divplacacentral">
     <div class="divplaca">
      <h2 class="titulop">Panel 1</h2>
@@ -225,26 +226,26 @@ async function panel() {
       <h3 class="titulop">Consumit: </h3> <p class="titulop">`+datospanel[2].consumit+`</p>
       <h3 class="titulop">HoresDeSol: </h3> <p class="titulop">`+datospanel[2].horessol+`</p>
     </div>
-    
+
     </div>
-    
+
     <div class="botons">
     <a class="crear" ><input type="submit" value="Crear Placa"> </a>
-    <input type="submit" value="Eliminar Placa"> 
+    <input type="submit" value="Eliminar Placa">
     <input type="submit" value="Modificar Placa">
     </div>
-    
+
     </div>
-    
-   
- 
+
+
+
   `
   let boto2= document.querySelector(".navbar-brand");
   boto2.addEventListener('click',estadistica);
 
   let boto3= document.querySelector(".crear");
   boto3.addEventListener('click',crearPanel);
-  
+
   }
   function crearPanel() {
 
@@ -259,7 +260,7 @@ async function panel() {
     <div class="pag">
     <h1 class="titulop">Nova Placa</h1>
 
-  
+
   <label for="obtingut">Obtingut:</label><br>
   <input type="numbre" id="obtingut" name="obtingut" placeholder="Obtingut"><br>
   <label for="perdut">Perdut:</label><br>
@@ -268,7 +269,9 @@ async function panel() {
   <input type="text" id="consumit" name="consumit"  placeholder="Consumit"><br>
   <label for="hores">HoresDeSol:</label><br>
   <input type="text" id="hores" name="hores"   placeholder="HoresDeSol"><br>
-  <input type="button" value="Enviar" onclick="cridarEnviar(document.getElementById('correu').value,document.getElementById('nom').value,document.getElementById('pwd').value)">
+  <input type="button" id="boto" value="Enviar">
+
+
 
 </div>
 
@@ -279,9 +282,12 @@ async function panel() {
 let boto2= document.querySelector(".navbar-brand");
 boto2.addEventListener('click',panel);
 
+let boto3= document.querySelector("#boto");
+boto3.addEventListener('click',cridarEnviar);
+
 }
-  
-  
+
+
   function moli() {
     document.title= "Moli De Vent";
     let contenedor= document.querySelector(".divprincipal");
@@ -289,17 +295,17 @@ boto2.addEventListener('click',panel);
     <nav class="navbar fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" >Pagina principal</a>
     </nav>
-  
+
     <div class="cabecera">
-  
+
     <p class="parrafocabecera">Treball Final Vicent</p>
-    
+
     </div>
     <div class="pag">
     <br>
     <h1 class="titulop">Molins De Vent</h1>
     <br>
-  
+
 
       </div>
         <h2>Moli 1</h2>
@@ -314,21 +320,21 @@ boto2.addEventListener('click',panel);
       </div>
 
     </div>
-    
-    
+
+
     <div class="pie">
-    
+
     <p class="parrafopie">Treball Final Vicent</p>
-    
-  
+
+
   </div>
   `
   let boto2= document.querySelector(".navbar-brand");
   boto2.addEventListener('click',estadistica);
-  
+
   }
-  
-  
+
+
   function central() {
     document.title= "Central";
     let contenedor= document.querySelector(".divprincipal");
@@ -336,18 +342,18 @@ boto2.addEventListener('click',panel);
     <nav class="navbar fixed-top navbar-dark bg-dark">
     <a class="navbar-brand" >Pagina principal</a>
     </nav>
-  
+
     <div class="cabecera">
-  
+
     <p class="parrafocabecera">Treball Final Vicent</p>
-    
+
     </div>
     <div class="pag">
     <br>
     <h1 class="titulop">Centrals</h1>
     <br>
 
-    
+
     </div>
       h2>Central 1</h2>
     </div>
@@ -360,19 +366,19 @@ boto2.addEventListener('click',panel);
      <h2>Central 3</h2>
     </div>
 
-  
-  
+
+
     </div>
-    
-   
+
+
     <div class="pie">
-    
+
     <p class="parrafopie">Treball Final Vicent</p>
-    
-  
+
+
   </div>
   `
   let boto2= document.querySelector(".navbar-brand");
   boto2.addEventListener('click',estadistica);
-  
+
   }

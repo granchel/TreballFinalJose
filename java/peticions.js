@@ -1,4 +1,5 @@
-//export { json, obtener, buscarObtener, remoteLogin, enviar, ie };
+export { cridarEnviar };
+
 function json(response) { return response.json()  }
 
 let fetchOptions = {
@@ -7,7 +8,14 @@ let fetchOptions = {
     body: '{}'
   };
 
-function cridarEnviar(obtingut,perdut,consumit,hores){
+//obtingut,perdut,consumit,hores
+function cridarEnviar(){
+
+  let obtingut= document.querySelector("#obtingut").value;
+  let perdut= document.querySelector("#perdut").value;
+  let consumit= document.querySelector("#consumit").value;
+  let hores= document.querySelector("#hores").value;
+
  //formData
   var formData = new FormData();
 
